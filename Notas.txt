@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Aug  3 00:44:44 2018
+
+@author: marce
+"""
+
+'''Notas para saber que estoy haciendo:
+    1 Necesito un método para actualizar mi lista de números cada vez que se 
+        produce un nuevo sorteo
+        Resuelto: usar la función actualizar lista.
+    2 Necesito un método con su base de datos para guardar los números predichos
+    3 Con esos números calcular el error abs, %error y el error acumulado
+    4 Implementar los métodos clásicos de predicción: méda movil, exponencial alisada, etc
+
+'''
+
+    
