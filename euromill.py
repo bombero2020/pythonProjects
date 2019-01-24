@@ -10,8 +10,10 @@ import pandas as pd
 import random as rd
 import scipy.stats as ss
 import matplotlib.pyplot as plt
+import datetime
 from random import choices
  
+
 from tkinter import *
 from tkinter import ttk
 
@@ -128,7 +130,8 @@ def genNum():
             numero.append(choices(banda_st1,w_st1))
         elif(i==6):
             numero.append(choices(banda_st2,w_st2))
-    return numero
+    
+    return [numero[i][0] for i in range(7)]
 
 #%%
 
@@ -155,9 +158,12 @@ choices(banda_n2, w_n2)
 pred=list()
 def guardarPred(num):
     '''Guarda n números predichos en una bd o csv, usando generarNumero'''
+    date=datetime.datetime.now().strftime('%Y-%m-%d')
     for i in range(1,num+1):
         #pred.append(generarNumero())
         pred.append(genNum())
+        78/27520
+    pred.insert(0,date)
     df=pd.DataFrame(pred)
     with open('Predictions.csv','a') as f:
         df.to_csv(f,header=False)    
